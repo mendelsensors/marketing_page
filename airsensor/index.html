@@ -23,26 +23,45 @@
     <meta property="og:url" content="http://mendelsensors.com">
     <meta name="twitter:card" content="">
 
-    <!-- Injection code (for footer & header) 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(function() {
-        $("#footer").load("../navfooter/footer.html");
-        $("#navbar").load("../navfooter/navbar.html");
-      })
-    </script>
-  </head> -->
+  </head>
 
   <body>
-
-    <!-- Navbar (injected)-->
-    <div id="navbar"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" data-navbar="smart">
+      <div class="container">
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="/">
+            <!--<img class="logo-dark" src="assets/img/Logo-Horizontal-Gradient.png" alt="logo">-->
+            <img class="logo-dark" src="../assets/img/Logo-Horizontal-Gradient.png" alt="logo">
+          </a>
+        </div>
+        <section class="navbar-mobile">
+          <span class="navbar-divider d-mobile-none"></span>
+          <ul class="nav nav-navbar">
+            <li class="nav-item">
+              <a class="nav-link" href="/airsensor">Air Sensor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">App <span class="arrow"></span></a>
+              <nav class="nav">
+                <a class="nav-link" href="#">iOS</a>
+                <a class="nav-link" href="#">Web</a>
+              </nav>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faq">FAQ</a>
+            </li>
+          </ul>
+        </section>
+        <a class="btn btn-light btn-sm ml-lg-5 mr-2" href="#">Login</a>
+        <a class="btn btn-sm btn-success" href="readme.html">SHOP</a>
+      </div>
+    </nav>
     <!-- /.navbar -->
-    <br />
-    <br />
-    <br />
-    <br />
-    <h3>Our template is <span class="text-primary" data-typing="beautiful, super fast, so clean, awesome!"></span></h3>
 
     <!-- Header -->
     <header class="header h-fullscreen" style="background-image: linear-gradient(-45deg, #d4fc79 0%, #8fd3f4 100%);">
@@ -51,34 +70,7 @@
         <div class="row align-items-center h-100">
 
           <div class="col-lg-6">
-            <h6 class="divider mt-8">Paragraph</h6>
-              <p>Our template is <span class="text-primary" data-typing="beautiful, super fast, so clean, awesome!"></span></p>
-
-              <h6 class="divider mt-8">Heading</h6>
-              <h3>Our template is <span class="text-primary" data-typing="beautiful, super fast, so clean, awesome!"></span></h3>
-              <h6 class="divider mt-8">Type Speed</h6>
-              <p>Add <code>data-type-speed="10"</code> to change type speed. Default is 50.</p>
-              <h3>Our template is <span class="text-primary" data-typing="beautiful, super fast, so clean, awesome!" data-type-speed="10"></span></h3>
-
-
-              <h6 class="divider mt-8">Backspace Speed</h6>
-              <p>Add <code>data-back-speed="100"</code> to change backspace speed. Default is 30.</p>
-              <h3>Our template is <span class="text-primary" data-typing="beautiful, super fast, so clean, awesome!" data-back-speed="100"></span></h3>
-
-
-              <h6 class="divider mt-8">Disable Loop</h6>
-              <p>Add <code>data-loop="false"</code> attribute to disable loop.</p>
-              <h3>Our template is <span class="text-primary" data-typing="beautiful, super fast, so clean, awesome!" data-loop="false"></span></h3>
-
-
-              <h6 class="divider mt-8">Backspace Delay</h6>
-              <p>Use <code>data-back-delay="2000"</code> to change the amount of delay before backspacing in milliseconds. Default is 800.</p>
-              <h3>Our template is <span class="text-primary" data-typing="beautiful, super fast, so clean, awesome!" data-back-delay="2000"></span></h3>
-
-
-              <h6 class="divider mt-8">Type Pausing</h6>
-              <p>You can pause in the middle of a string for a given amount of time by including an escape character. The following example has <code>data-typing="beautiful, super ^1000 fast, so ^2000 clean, awesome!"</code>.</p>
-              <h3>Our template is <span class="text-primary" data-typing="beautiful, super ^1000 fast, so ^2000 clean, awesome!">
+            <h1 class="display-4 fw-500">Built For <span class="fw-400 pl-2" data-typing="greenhouses, indoor growing, vertical farms, garage grows, home tents" data-type-speed="80"></span></h1>              
             <p class="lead mt-5 mb-7 mb-md-9 w-80">
               Spend more time enjoying your grow and less time testing your parameters. The Mendel air sensor brings real-time monitoring to your setup. Get notified immediately when something goes wrong.
               <br /><br />
@@ -226,8 +218,67 @@
     </section>
     <!-- /.How Many Do I need? -->
 
-    <!-- Footer (injected)-->
-    <div id="footer"></div>
+    <!-- Footer -->
+    <footer class="footer py-7">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12">
+            <a href="/"><img src="../assets/img/Logo-Horizontal-Gradient.png" alt="logo"></a>
+          </div>
+
+          <div class="col-xl-5">
+            <p>Mendel Sensors is made with ❤ by RapidLED. Enter your email address so you never miss out on product updates.</p>
+            <form class="input-round justify-content-center justify-content-lg-end" action="" method="post" target="_blank">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                </div>
+                <input type="text" name="EMAIL" class="form-control" placeholder="Email Address">
+                <span class="input-group-append">
+                  <button class="btn btn-success">Subscribe</button>
+                </span>
+              </div>
+            </form>
+            <br />
+            <div class="social social-bordered">
+              <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+              <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+              <a class="social-youtube" href="#"><i class="fa fa-youtube"></i></a>
+              <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <hr class="d-xl-none">
+          </div>
+
+          <div class="col-4 col-xl-2 offset-xl-1">
+            <h6 class="mb-4 mt-1"><strong>Company</strong></h6>
+            <div class="nav flex-column">
+              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/about">About</a>
+            </div>
+          </div>
+
+          <div class="col-4 col-xl-2">
+            <h6 class="mb-4 mt-1"><strong>Product</strong></h6>
+            <div class="nav flex-column">
+              <a class="nav-link" href="/airsensor">Sensor</a>
+              <a class="nav-link" href="#">Web App</a>
+              <a class="nav-link" href="#">iOS App</a>
+            </div>
+          </div>
+
+          <div class="col-4 col-xl-2">
+            <h6 class="mb-4 mt-1"><strong>Support</strong></h6>
+            <div class="nav flex-column">
+              <a class="nav-link" href="/contact">Contact</a>
+              <a class="nav-link" href="/pricing">Pricing</a>
+              <a class="nav-link" href="/faq">FAQ</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
     <!-- /.footer -->
 
     <!-- Scripts -->
