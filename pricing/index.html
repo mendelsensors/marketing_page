@@ -2,7 +2,7 @@
 layout: default
 ---
 <!-- Pricing Section -->
-<section class="section">
+<section class="section" style="margin-bottom: -125px;">
   <div class="container">
     <header class="section-header">
       <h2>Sensors start at $10 a month</h2>
@@ -26,7 +26,7 @@ layout: default
           <p class="plan-name">1-2 Sensors</p>
           <h2 class="price">
             <span class="price-unit">$</span>
-            <span data-bind-radio="pricing-1" data-monthly="10" data-yearly="100">10</span>
+            <span data-bind-radio="pricing-1" data-monthly="12" data-yearly="120">12</span>
           </h2>
           <p class="small text-lighter">Billed <span data-bind-radio="pricing-1" data-monthly="monthly" data-yearly="yearly">monthly</span> per sensor
           </p>
@@ -67,7 +67,7 @@ layout: default
           <p class="plan-name">3 Sensors</p>
           <h2 class="price text-success">
             <span class="price-unit">$</span>
-            <span data-bind-radio="pricing-1" data-monthly="8" data-yearly="80">8</span>
+            <span data-bind-radio="pricing-1" data-monthly="10" data-yearly="100">10</span>
           </h2>
           <p class="small text-lighter">
             Billed
@@ -93,7 +93,7 @@ layout: default
           <p class="plan-name">10+ sensors</p>
           <h2 class="price">
             <span class="price-unit">$</span>
-            <span data-bind-radio="pricing-1" data-monthly="7" data-yearly="70">70</span>
+            <span data-bind-radio="pricing-1" data-monthly="8" data-yearly="80">80</span>
           </h2>
           <p class="small text-lighter">
             Billed
@@ -120,35 +120,7 @@ layout: default
 <!-- /.Pricing Section -->
 
 <!-- How many do i need? -->
-<section class="section" style="margin-top: -125px;">
-  <div class="container">
-    <header class="section-header">
-      <h2>How many sensors should I get?</h2>
-      <p class="lead">Our air sensors are best when used together or something.</p>
-    </header>
-
-    <div class="row gap-y text-center">
-
-      <div class="col-md-6 col-xl-4 feature-1">
-        <p class="feature-icon"><img src="../assets/img/airsensor/growhouse.png" alt="..."></p>
-        <h5>Home Tent</h5>
-        <p class="text-muted">You should be using 1-2 sensors</p>
-      </div>
-
-      <div class="col-md-6 col-xl-4 feature-1">
-        <p class="feature-icon"><img src="../assets/img/airsensor/growhouse.png" alt="..."></p>
-        <h5>Garage Grow</h5>
-        <p class="text-muted">3 sensors seems like the move</p>
-      </div>
-
-      <div class="col-md-6 col-xl-4 feature-1">
-        <p class="feature-icon"><img src="../assets/img/airsensor/growhouse.png" alt="..."></p>
-        <h5>Commercial Use</h5>
-        <p class="text-muted">Big Poppa, get 10. Or 1 per bay?</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% include howmanyairsensors.html %}
 <!-- /.How Many Do I need? -->
 
 <!-- FAQ -->
