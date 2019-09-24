@@ -187,11 +187,26 @@ layout: default
 <br>
 <br>
 <br>
+<!-- Billing setup -->
 <div id="servicebot-subscription-portal"></div>
 <script>
     window.servicebotSettings = {
         servicebot_id: "IhOryQZYY0jL", // LIVE & TEST MODE IDs ARE DIFFERENT
 	service: "Mendel Pro Subscription"
+    };
+    (function () { var s = document.createElement('script'); s.src = 'https://js.servicebot.io/embeds/servicebot-billing-settings-embed.js'; s.async = true; s.type = 'text/javascript'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+</script>
+<!-- Subscription management -->
+<div id="servicebot-subscription-portal"></div>
+<script>
+    window.servicebotSettings = {
+        servicebot_id: "IhOryQZYY0jL", // LIVE & TEST MODE IDs ARE DIFFERENT
+	service: "Mendel Pro Subscription",
+	email: "EXAMPLE@EMAIL.COM", // REPLACE WITH USER'S EMAIL,
+	options: {
+		cancel_now: true,
+		messageOnCancel: "We're sorry to see you go :(",
+	}
     };
     (function () { var s = document.createElement('script'); s.src = 'https://js.servicebot.io/embeds/servicebot-billing-settings-embed.js'; s.async = true; s.type = 'text/javascript'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
 </script>
