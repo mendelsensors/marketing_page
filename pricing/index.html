@@ -2,28 +2,102 @@
 layout: default
 ---
 <!-- Pricing Section -->
+<section class="section bg-gray" style="padding-bottom:3.5rem">
+	<div class="container">
+	  <div class="row gap-y align-items-center">
+
+	    <div class="col-md-4">
+	      <p class="lead-6 text-dark fw-600 lh-2">Mike come up with something catchy here</p>
+	      <p class="lead">Our prices are very easy to understand. There's not any extra or hidden fee. You just pay what is listed here. Until we add a monthly fee.</p>
+	      <p class="fw-400"><a href="/airsensor">View more details here <i class="ti-arrow-right fs-10 ml-2"></i></a></p>
+	    </div>
+
+
+	    <div class="col-md-7 ml-auto">
+	      <div class="row gap-y">
+	        <div class="col-md-6">
+
+	          <p class="text-center lead-3 fw-600 text-dark">Air Lite</p>
+
+	          <div class="card text-center shadow-1 hover-shadow-9">
+	            <div class="card-img-top text-white bg-img h-200 d-flex align-items-center" style="background-image: url(../assets/img/thumb/3.jpg)" data-overlay="1">
+	            </div>
+	            <div class="card-body py-2">
+	              <p class="lead-7 fw-600 text-dark">$99</p>
+	              <a class="btn btn-primary" href="#">Shop</a>
+	  			  <hr class="w-150px">
+	              <p>
+	                Parameters:<br>
+	                Temp, Humidity, VPD, Lux
+	              </p>
+	              <hr class="w-150px">
+	              <p>
+	                Out of range alerts:<br>
+	                Push Notifications, Email
+	              </p>
+	              <hr class="w-150px">
+	              <p>
+	                Warranty:<br>
+	                2 years
+	              </p>
+	            </div>
+	          </div>
+	        </div>
+
+	        <div class="col-md-6">
+
+	          <p class="text-center lead-3 fw-600 text-dark">Air</p>
+
+	          <div class="card text-center shadow-1 hover-shadow-9">
+	            <div class="card-img-top text-white bg-img h-200 d-flex align-items-center" style="background-image: url(../assets/img/thumb/3.jpg)" data-overlay="1">
+	            </div>
+	            <div class="card-body py-2">
+	              <p class="lead-7 fw-600 text-dark">$149</p>
+	              <a class="btn btn-primary" href="#">Shop</a>
+	  			  <hr class="w-150px">
+	              <p>
+	                Parameters:<br>
+	                Same as Lite + CO2
+	              </p>
+	              <hr class="w-150px">
+	              <p>
+	                Out of range alerts:<br>
+	                Push Notifications, Email
+	              </p>
+	              <hr class="w-150px">
+	              <p>
+	                Warranty:<br>
+	                3 years
+	              </p>
+	            </div>
+	          </div>
+	        </div>
+
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+</section>
+
+<!-- How many do i need? -->
+{% include howmanyairsensors.html %}
+<!-- /.How Many Do I need? -->
+
+
+
+<!--
+
 <section class="section" style="margin-bottom: -125px;">
   <div class="container">
     <header class="section-header">
-      <h2>Sensors cost $30 and come with three months of service</h2>
-      <p class="lead">After that we charge a monthly SaaS fee.</p>
-      <div class="text-center my-7">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-round btn-outline-secondary w-150 active">
-            <input type="radio" name="pricing-1" value="monthly" autocomplete="off" checked> Monthly
-          </label>
-          <label class="btn btn-round btn-outline-secondary w-150">
-            <input type="radio" name="pricing-1" value="yearly" autocomplete="off"> Yearly
-          </label>
-        </div>
-      </div>
-      <small style="margin-top: -50px;">20% discount when you pay yearly vs monthly.</small>
+      <h2>Sensors start at $99</h2>   
     </header>
 
     <div class="row gap-y text-center" style="margin-top: -50px;">
       <div class="col-md-4">
         <div class="pricing-1">
-          <p class="plan-name">1-2 Sensors</p>
+          <p class="plan-name">Air Lite</p>
           <h2 class="price">
             <span class="price-unit">$</span>
             <span data-bind-radio="pricing-1" data-monthly="15" data-yearly="150">15</span>
@@ -117,13 +191,11 @@ layout: default
     </div>
   </div>
 </section>
+-->
 <!-- /.Pricing Section -->
 
-<!-- How many do i need? -->
-{% include howmanyairsensors.html %}
-<!-- /.How Many Do I need? -->
-
 <!-- FAQ -->
+<!--
 <section class="section" style="margin-top: -125px;">
   <div class="container">
     <header class="section-header">
@@ -182,19 +254,26 @@ layout: default
 
   </div>
 </section>
+<br>
+<br>
+<br>
+<br>
+-->
 
-<br>
-<br>
-<br>
-<br>
 <!-- Billing setup -->
+
+<!-- Subscription management -->
+<!--
 <div id="servicebot-subscription-portal"></div>
 <script>
     window.servicebotSettings = {
         servicebot_id: "IhOryQZYY0jL", // LIVE & TEST MODE IDs ARE DIFFERENT
-	service: "Mendel Pro Subscription"
+	service: "Mendel Pro Subscription",
+	email: "nathan@getfishbit.com", // REPLACE WITH USER'S EMAIL,
+	options: {
+		cancel_now: true,
+	}
     };
     (function () { var s = document.createElement('script'); s.src = 'https://js.servicebot.io/embeds/servicebot-billing-settings-embed.js'; s.async = true; s.type = 'text/javascript'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
 </script>
-
 <!-- /. FAQ -->
