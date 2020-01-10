@@ -4,16 +4,187 @@ layout: default
 <!-- Pricing Section -->
 <section class="section bg-gray" style="padding-bottom:3.5rem;">
 	<div class="container">
-
-	        <div class="col-md-6 mx-auto">
+		<div id='product-component-1578690860064'></div>
+		<script type="text/javascript">
+		/*<![CDATA[*/
+		(function () {
+		  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+		  if (window.ShopifyBuy) {
+		    if (window.ShopifyBuy.UI) {
+		      ShopifyBuyInit();
+		    } else {
+		      loadScript();
+		    }
+		  } else {
+		    loadScript();
+		  }
+		  function loadScript() {
+		    var script = document.createElement('script');
+		    script.async = true;
+		    script.src = scriptURL;
+		    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+		    script.onload = ShopifyBuyInit;
+		  }
+		  function ShopifyBuyInit() {
+		    var client = ShopifyBuy.buildClient({
+		      domain: 'mendel-sensors.myshopify.com',
+		      storefrontAccessToken: '7c86c83501b6724fbfe150aeff1ca84e',
+		    });
+		    ShopifyBuy.UI.onReady(client).then(function (ui) {
+		      ui.createComponent('product', {
+		        id: '4381876289626',
+		        node: document.getElementById('product-component-1578690860064'),
+		        moneyFormat: '%24%7B%7Bamount%7D%7D',
+		        options: {
+		  "product": {
+		    "styles": {
+		      "product": {
+		        "@media (min-width: 601px)": {
+		          "max-width": "100%",
+		          "margin-left": "0",
+		          "margin-bottom": "50px"
+		        },
+		        "text-align": "left"
+		      },
+		      "title": {
+		        "font-size": "26px"
+		      },
+		      "button": {
+		        "font-size": "16px",
+		        "padding-top": "16px",
+		        "padding-bottom": "16px",
+		        ":hover": {
+		          "background-color": "#4690e4"
+		        },
+		        "background-color": "#4ea0fd",
+		        ":focus": {
+		          "background-color": "#4690e4"
+		        },
+		        "border-radius": "5px"
+		      },
+		      "quantityInput": {
+		        "font-size": "16px",
+		        "padding-top": "16px",
+		        "padding-bottom": "16px"
+		      },
+		      "price": {
+		        "font-size": "18px"
+		      },
+		      "compareAt": {
+		        "font-size": "15.299999999999999px"
+		      }
+		    },
+		    "layout": "horizontal",
+		    "contents": {
+		      "img": false,
+		      "imgWithCarousel": true,
+		      "button": false,
+		      "buttonWithQuantity": true,
+		      "description": true
+		    },
+		    "width": "100%",
+		    "text": {
+		      "button": "Add to cart"
+		    }
+		  },
+		  "productSet": {
+		    "styles": {
+		      "products": {
+		        "@media (min-width: 601px)": {
+		          "margin-left": "-20px"
+		        }
+		      }
+		    }
+		  },
+		  "modalProduct": {
+		    "contents": {
+		      "img": false,
+		      "imgWithCarousel": true,
+		      "button": false,
+		      "buttonWithQuantity": true
+		    },
+		    "styles": {
+		      "product": {
+		        "@media (min-width: 601px)": {
+		          "max-width": "100%",
+		          "margin-left": "0px",
+		          "margin-bottom": "0px"
+		        }
+		      },
+		      "button": {
+		        "font-size": "16px",
+		        "padding-top": "16px",
+		        "padding-bottom": "16px",
+		        ":hover": {
+		          "background-color": "#4690e4"
+		        },
+		        "background-color": "#4ea0fd",
+		        ":focus": {
+		          "background-color": "#4690e4"
+		        },
+		        "border-radius": "5px"
+		      },
+		      "quantityInput": {
+		        "font-size": "16px",
+		        "padding-top": "16px",
+		        "padding-bottom": "16px"
+		      }
+		    },
+		    "text": {
+		      "button": "Add to cart"
+		    }
+		  },
+		  "cart": {
+		    "styles": {
+		      "button": {
+		        "font-size": "16px",
+		        "padding-top": "16px",
+		        "padding-bottom": "16px",
+		        ":hover": {
+		          "background-color": "#4690e4"
+		        },
+		        "background-color": "#4ea0fd",
+		        ":focus": {
+		          "background-color": "#4690e4"
+		        },
+		        "border-radius": "5px"
+		      }
+		    },
+		    "text": {
+		      "total": "Subtotal",
+		      "notice": "Shipping and any applicable sales tax are added at checkout.",
+		      "button": "Checkout"
+		    },
+		    "contents": {
+		      "note": true
+		    },
+		    "popup": false
+		  },
+		  "toggle": {
+		    "styles": {
+		      "toggle": {
+		        "background-color": "#4ea0fd",
+		        ":hover": {
+		          "background-color": "#4690e4"
+		        },
+		        ":focus": {
+		          "background-color": "#4690e4"
+		        }
+		      },
+		      "count": {
+		        "font-size": "16px"
+		      }
+		    }
+		  }
+		},
+		      });
+		    });
+		  }
+		})();
+		/*]]>*/
+		</script>
+	        <!-- <div class="col-md-6 mx-auto">
 	          <div class="card text-center shadow-1 hover-shadow-9">
-							<div style="
-@media(max-width:767px){
-.responsive_container{display: inline-block !important; width: 100% !important;}
-.responsive_container .responsive{width: 50% !important;height: 300px;}
-.responsive_container .gallery img, .gallery_tall{height: 130px;overflow: hidden;}
-.responsive_container .gallery{height: 140px;}
-}" id='product-component-1578434102225'></div>
 	            <div class="card-body py-2">
 
 	  			  		<hr class="w-150px">
@@ -42,7 +213,7 @@ layout: default
 	                Dark Green
 	              </p>
 	            </div>
-	          </div>
+	          </div> -->
 
 	       <!--<div class="col-md-6 col-xl-6 popular">
 	          <div class="card text-center shadow-1 hover-shadow-9">
@@ -304,148 +475,3 @@ layout: default
     (function () { var s = document.createElement('script'); s.src = 'https://js.servicebot.io/embeds/servicebot-billing-settings-embed.js'; s.async = true; s.type = 'text/javascript'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
 </script>
 <!-- /. FAQ -->
-
-<script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'mendel-sensors.myshopify.com',
-      storefrontAccessToken: '7c86c83501b6724fbfe150aeff1ca84e',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('product', {
-        id: '4381876289626',
-        node: document.getElementById('product-component-1578434102225'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
-        },
-        "carousel-button": {
-          "display": "none"
-        }
-      },
-      "title": {
-        "font-size": "19px"
-      },
-      "button": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "quantityInput": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "price": {
-        "font-size": "16px"
-      },
-      "compareAt": {
-        "font-size": "13.6px"
-      }
-    },
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "quantityInput": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "cart": {
-    "styles": {
-      "button": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "notice": "Shipping and any applicable sales tax are added at checkout.",
-      "button": "Checkout"
-    },
-    "contents": {
-      "note": true
-    },
-    "popup": false
-  },
-  "toggle": {
-    "styles": {
-      "count": {
-        "font-size": "16px"
-      }
-    }
-  }
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-</script>
