@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+  <title>Mendel Sensors</title>
+  <based-in>San Francisco/Los Angeles/Denver/Miami</based-in>
+  <founding-date>3/1/19</founding-date>
+  <website>www.mendelsensors.com</website>
+  <press-contact>
+    <!-- Mail address -->
+  </press-contact>
+
+  <!-- Google analytics ID: -->
+  <analytics></analytics>
+
+<!--   <phone></phone> -->
+  <address>
+    <line>
+      310 Shaw Road, Suite C
+    </line>
+    <line>
+      South San Francisco
+    </line>
+    <line>
+      United States
+    </line>
+  </address>
+
+  <socials>
+    <social>
+      <name>facebook</name>
+      <link>https://www.facebook.com/mendel.sensors</link>
+    </social>
+    <social>
+      <name>twitter</name>
+      <link>https://twitter.com/mendelsensors</link>
+    </social>
+    <social>
+      <name>instagram</name>
+      <link>https://www.instagram.com/mendelsensors/</link>
+    </social>
+  </socials>
+
+  <description>
+    Mendel Sensors builds easy to use environmental sensors with best in class apps and analytics to take the guesswork out of growing, help increase yields and educate growers.
+    
+     As a company we strive to make smarts tools (both software and hardware) for indoor farmers growing anything from cannabis to microgreens to orchids and seedlings.
+  </description>
+
+  <!-- Choose between a single block: -->
+  <history>
+    We started Mendel Sensors after learning from our experience building RapidLED, a manufacturer of LED and DIY LED parts for a variety of industries including aquariums, laboratories and indoor farmers. We quickly realized that horticulture was where we wanted to focus our efforts and partnered with Current Labs, a company that makes IoT sensors.
+  </history>
+
+  <widgets>
+    <mailchimp>//url.us3.list-manage.com/subscribe/post?u=2c2ca69c2e81f29f6f7fe6b6d&amp;id=d442c49b18</mailchimp>
+    <appstore>950812012</appstore>
+<!--     <playstore>com.noodlecake.altosadventure</playstore>
+    <steam>347160</steam>
+    <humble>steredenn/7SDLfk23hw</humble>
+    <itch>27992</itch>
+    <gamejolt>8ReMi2Nw</gamejolt>
+    <bandcamp>1135613467</bandcamp> -->
+  </widgets>
+
+  <!-- Or multiple blocks: -->
+  <!--
+  <histories>
+    <history>
+      <header></header>
+      <text></text>
+    </history>
+  </histories>
+  -->
+
+ <!--  <trailers>
+    <trailer>
+      <name></name>
+
+      <! Pick one: -->
+      <!--<youtube> -->
+        <!-- Video ID only, not the full URL -->
+      <!--</youtube>
+      <vimeo>
+        <! Video ID only, not the full URL -->
+     <!-- </vimeo>
+    </trailer>
+  </trailers>
+
+  <awards>
+    <award>
+      <description></description>
+      <info></info>
+    </award>
+  </awards>
+
+  <quotes>
+    <quote>
+      <description></description>
+      <name></name>
+      <website></website>
+      <link></link>
+    </quote>
+  </quotes>
+
+  <additionals>
+    <additional>
+      <title></title>
+      <description></description>
+      <link></link>
+    </additional>
+  </additionals> -->
+
+ <!-- <credits>
+    <credit>
+      <person></person>
+      <role></role>
+
+      <! Optional: -->
+ <!--     <website></website>
+    </credit>
+  </credits>
+
+  <contacts>
+    <contact>
+      <name></name>
+
+      <! Pick one: -->
+    <!--  <mail></mail>
+      <link></link>
+    </contact>
+  </contacts> -->
+</company>
