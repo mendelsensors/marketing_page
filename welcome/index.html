@@ -27,7 +27,6 @@ layout: default
 <section id="section-mission" class="section">
   <div class="container">
     <div class="row gap-y align-items-center">
-
       <div class="col-md-9 mx-auto">
         <h2>Getting Started:</h2>
         <p class="lead">To get started, if you’re using an iOS device such as an iPhone or iPad open the app and create an account. For Android and web users, you’ll create an account via the web app which you can access by clicking the purple button above. You will have to confirm your email address in order to recieve notifications from the web app.</p>
@@ -35,8 +34,52 @@ layout: default
         <p class="lead">To add your Air Sensor in the web app click on the “Sensors” tab on the left side of the screen and then click on the “Add Air Sensor” button on the top right hand side. In the iOS app click on the “Add” tab and then the “Air Sensor Lite” row.</p>
         <p class="lead">Follow the on screen instructions from there and if you have any questions feel free contact us here.</p>
       </div>
-
     </div>
+
+    <h6 class="divider">Status LED Color Guide</h6>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Status LED</th>
+          <th>Meaning</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Blinking Blue</td>
+          <td>WiFi listening mode</td>
+          <td>Normal if unconnected</td>
+        </tr>
+        <tr>
+          <td>Blinking Green</td>
+          <td>Connecting to your WiFi router</td>
+          <td>Abnormal if it persists >30 seconds</td>
+        </tr>
+        <tr>
+          <td>Blinking Green & White</td>
+          <td>Connecting to our cloud servers</td>
+          <td>Should only last a few seconds</td>
+        </tr>
+        <tr>
+          <td>Breathing White</td>
+          <td>Connected to our server and WiFi</td>
+          <td>Normal operating behavior</td>
+        </tr>
+        <tr>
+          <td>Single Red Flash</td>
+          <td>Sensor woke up and took a reading</td>
+          <td>Normal operating behavior, once a minute</td>
+        </tr>
+        <tr>
+          <td>Blinking Magenta</td>
+          <td>Performing an OTA update</td>
+          <td>Your firmware is updating!</td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 </section>
 <!-- /.paragraph -->
