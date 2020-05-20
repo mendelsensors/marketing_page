@@ -36,13 +36,13 @@
     <!-- we are using this to inject analytics into the shopify buy button iframe....
     https://community.shopify.com/c/Ecommerce-Marketing/HOW-TO-GUIDE-Track-Referrer-URL-with-Google-Analytics-Tag/m-p/661845#M32788 -->
     {% if {{page.title}} == "Shop" %}
-    
+
       <!-- Global site tag (gtag.js) - Google Analytics -->
-		<script>
+		<!-- <script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
- 
+
 		// OPTIONAL Analytics code for the Main Site 'property' is UA-XXXXXXXX-X, also change mywebsite.com
 		ga('create', 'UA-59108533-2', 'mendelsensors.com');
 		ga('send', 'pageview');
@@ -56,9 +56,10 @@
 // 		ga('require', 'linker');
 // 		ga('linker:autoLink', ['checkout.shopify.com'] );
 // 		ga('send', 'pageview');
- 
-		</script>
+
+		</script> -->
       <!-- Google Analytics End -->
+
 
     {% endif %}
 
@@ -69,7 +70,18 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBCVQ7B"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'UA-59108533-2', {
+      'linker': {
+        'domains': ['mendelsensors.com']
+      }
+    });
+    </script>
     <!-- Topbar -->
     <!-- <section class="topbar bg-dark d-flex" style="background-color: #961de2 !important;
     font-weight: 600;">
