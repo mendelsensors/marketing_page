@@ -34,18 +34,22 @@
     
     <!-- Get UTM parameters from URL, save to localStorage -->
 	<script>
-		var url_string = window.location.href;
-		var url = new URL(url_string);
-		localStorage.source = url.searchParams.get("utm_source");
-		localStorage.medium = url.searchParams.get("utm_medium");
-		localStorage.campaign = url.searchParams.get("utm_campaign");
+	var url_string = window.location.href;
+	var url = new URL(url_string);
+	var params = url.searchParams;
+	
+	if (params.get("utm_source")) {
+		localStorage.source = params.get("utm_source");
+		localStorage.medium = params.get("utm_medium");
+		localStorage.campaign = params.get("utm_campaign");
 		
 		// Get parameter whether underscore or not
-		if (url.searchParams.get("utmcontent")) {
-			localStorage.content = url.searchParams.get("utmcontent");
-		} else if (url.searchParams.get("utm_content")) {
-			localStorage.content = url.searchParams.get("utm_content");
+		if (params.get("utmcontent")) {
+			localStorage.content = params.get("utmcontent");
+		} else if (params.get("utm_content")) {
+			localStorage.content = params.get("utm_content");
 		}
+	}
 	</script>
 
   </head>
