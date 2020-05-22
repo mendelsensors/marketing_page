@@ -51,21 +51,11 @@
 		}
 	}
 	
-	window.onload = function() {
-	    var win = document.getElementsByTagName('iframe')[0].contentWindow;
-	    var obj = {
-	       name: "Jack"
-	    };
-	    win.postMessage(JSON.stringify({key: 'storage', data: obj}), "*");
-	};
-	
 	</script>
 
   </head>
 
   <body>
-  
-  	<iframe style="display: none;" src="https://mendel-sensors.myshopify.com"></iframe>
   	
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBCVQ7B"
