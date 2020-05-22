@@ -50,6 +50,15 @@
 			localStorage.content = params.get("utm_content");
 		}
 	}
+	
+	window.onload = function() {
+	    var win = document.getElementsByTagName('iframe')[0].contentWindow;
+	    var obj = {
+	       name: "Jack"
+	    };
+	    win.postMessage(JSON.stringify({key: 'storage', data: obj}), "*");
+	};
+	
 	</script>
 
   </head>
