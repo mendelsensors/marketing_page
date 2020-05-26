@@ -31,18 +31,21 @@
     <meta property="og:url" content="http://mendelsensors.com/">
     <meta property="og:type" content="website">
     <!--<meta name="twitter:card" content="summary_large_image">-->
-    
+
+    <!-- add Jquery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
     <!-- Get UTM parameters from URL, save to localStorage -->
 	<script>
 	var url_string = window.location.href;
 	var url = new URL(url_string);
 	var params = url.searchParams;
-	
+
 	if (params.get("utm_source")) {
 		localStorage.source = params.get("utm_source");
 		localStorage.medium = params.get("utm_medium");
 		localStorage.campaign = params.get("utm_campaign");
-		
+
 		// Get parameter whether underscore or not
 		if (params.get("utmcontent")) {
 			localStorage.content = params.get("utmcontent");
@@ -50,13 +53,13 @@
 			localStorage.content = params.get("utm_content");
 		}
 	}
-	
+
 	</script>
 
   </head>
 
   <body>
-  	
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBCVQ7B"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
