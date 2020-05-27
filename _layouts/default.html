@@ -207,6 +207,7 @@
     <!-- https://www.terminusapp.com/blog/bet-you-havent-used-utm-parameters-like-this/ -->
     <!-- made some changes, uses local storage from header script to grab UTM data-->
     <script type="text/javascript" charset="utf-8">
+      //grabs the coorect UTM data by param name
       function getParameterByName(name) {
         var param = "";
         if (name == "utm_source") {
@@ -224,6 +225,7 @@
       }
 
       $(document).ready(function () {
+        //grab the utm data if there and add it to the invisible fields in our mailchimp sign up form.
         function addFormElem(paramName, fieldName) {
           var paramValue = getParameterByName(paramName);
           var $utmEl = $("<input type='hidden' name='" + fieldName + "' value='" + paramValue + "'>");
@@ -232,8 +234,8 @@
           }
         }
 
-        // Note: Only change the values after ":" if they are different for you
-        // They are the same one as you added in your email marketing provider
+        // These are the same keys as we added in mailchimp to add hidden fields
+        // that way when someone signs up, we can fill them in without them knwoing and get the data
         var utmParams = {
           "utm_source"   : "USOURCE",
           "utm_medium"   : "UMEDIUM",
@@ -241,7 +243,7 @@
           "utm_content"  : "UCONTENT",
           "utm_term"     : "UTERM"
         };
-
+        //run through each UTM data param we are interested in and add the data if it is there
         for (var param in utmParams) {
           addFormElem(param, utmParams[param]);
         }
