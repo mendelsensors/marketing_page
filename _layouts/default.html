@@ -68,6 +68,7 @@
 		localStorage.source = params.get("utm_source");
 		localStorage.medium = params.get("utm_medium");
 		localStorage.campaign = params.get("utm_campaign");
+    localStorage.term = params.get("utm_term");
 
 		// Get parameter whether underscore or not
 		if (params.get("utmcontent")) {
@@ -204,25 +205,34 @@
 
     <!--Script to add UTM data to mailchimp subscriber form. -->
     <!-- https://www.terminusapp.com/blog/bet-you-havent-used-utm-parameters-like-this/ -->
+    <!-- made some changes, uses local storage from header script to grab UTM data-->
     <script type="text/javascript" charset="utf-8">
       function getParameterByName(name) {
-        name = name.replace(/[[]/, "\[").replace(/[]]/, "\]");
-        var regexS = "[\?&]" + name + "=([^&#]*)";
-        var regex = new RegExp(regexS);
-        var results = regex.exec(window.location.search);
-        if(results == null) {
-          return "";
-        } else {
-          return decodeURIComponent(results[1].replace(/\+/g, " "));
+        var param = "";
+        if (name == "utm_source") {
+          param = localStorage.source;
+        } else if (name == "utm_medium") {
+          param = localStorage.medium;
+        } else if (name == "utm_campaign") {
+          param = localStorage.campaign;
+        } else if (name == "utm_content") {
+          param = localStorage.content;
+        } else if (name == "utm_term") {
+          param = localStorage.term;
         }
+        return param;
       }
 
       $(document).ready(function () {
         function addFormElem(paramName, fieldName) {
           var paramValue = getParameterByName(paramName);
+          console.log("field name =" + fieldName + " paramvalue = " + paramValue);
           var $utmEl = $("<input type='hidden' name='" + fieldName + "' value='" + paramValue + "'>");
           if (paramValue != "") {
+            console.log($utmEl);
             $("form").first().prepend($utmEl);
+            console.log($utmEl);
+
           }
         }
 
