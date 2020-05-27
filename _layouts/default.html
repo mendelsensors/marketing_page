@@ -226,13 +226,9 @@
       $(document).ready(function () {
         function addFormElem(paramName, fieldName) {
           var paramValue = getParameterByName(paramName);
-          console.log("field name =" + fieldName + " paramvalue = " + paramValue);
           var $utmEl = $("<input type='hidden' name='" + fieldName + "' value='" + paramValue + "'>");
           if (paramValue != "") {
-            console.log($utmEl);
             $("form").first().prepend($utmEl);
-            console.log($utmEl);
-
           }
         }
 
