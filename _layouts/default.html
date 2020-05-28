@@ -81,14 +81,23 @@
 	// Listen for messages from Shopify Order Status page; sends
 	// requested localStorage vars to domain of requesting page
 	window.onmessage = function(e) {
-	  if (e.origin !== "https://shop.mendelsensors.com") {
-		console.log('Message came from ' + e.origin);
-		return;
-	  }
-	  var lsKey = e.data;
-	  var parent = window.parent;
-	  var lsData = localStorage.getItem(lsKey);
-	  parent.postMessage(lsData, "*");
+		var parent = window.parent;
+		if (e.origin !== "https://shop.mendelsensors.com") {
+			console.log('Message came from ' + e.origin);
+			return;
+		}
+		if (e.data == 'get_vars' && localStorage.getItem('source') {
+			var lsData = new Object();
+			try {
+				lsData['source'] = localStorage.getItem('source');
+				lsData['medium'] = localStorage.getItem('medium');
+				lsData['content'] = localStorage.getItem('content');
+				lsData['campaign'] = localStorage.getItem('campaign');
+				parent.postMessage(JSON.stringify(lsData), '*');
+			} catch(err) {
+				console.log(err);
+			}
+		}
 	};
 
 	</script>
