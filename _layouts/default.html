@@ -77,6 +77,19 @@
 			localStorage.content = params.get("utm_content");
 		}
 	}
+	
+	// Listen for messages from Shopify Order Status page; sends
+	// requested localStorage vars to domain of requesting page
+	window.onmessage = function(e) {
+	  if (e.origin !== "https://shop.mendelsensors.com") {
+		console.log('Message came from ' + e.origin);
+		return;
+	  }
+	  var lsKey = e.data;
+	  var parent = window.parent;
+	  var lsData = localStorage.getItem(lsKey);
+	  parent.postMessage(lsData, "*");
+	};
 
 	</script>
 
