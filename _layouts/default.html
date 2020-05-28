@@ -86,7 +86,7 @@
 			console.log('Message came from ' + e.origin);
 			return;
 		}
-		if (e.data == 'get_vars' && localStorage.getItem('source') {
+		if (e.data == 'get_vars' && localStorage.getItem('source')) {
 			var lsData = new Object();
 			try {
 				lsData['source'] = localStorage.getItem('source');
