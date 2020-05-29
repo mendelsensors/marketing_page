@@ -36,7 +36,6 @@
     <!-- we are using this to inject analytics into the shopify buy button iframe....
     https://community.shopify.com/c/Ecommerce-Marketing/HOW-TO-GUIDE-Track-Referrer-URL-with-Google-Analytics-Tag/m-p/661845#M32788 -->
     {% if {{page.title}} == "Shop" %}
-
       <!-- Global site tag (gtag.js) - Google Analytics -->
   		<script>
     		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -59,25 +58,65 @@
     {% endif %}
 
     <!-- Get UTM parameters from URL, save to localStorage -->
-	<script>
-	var url_string = window.location.href;
-	var url = new URL(url_string);
-	var params = url.searchParams;
+    <script>
 
-	if (params.get("utm_source")) {
-		localStorage.source = params.get("utm_source");
-		localStorage.medium = params.get("utm_medium");
-		localStorage.campaign = params.get("utm_campaign");
-    localStorage.term = params.get("utm_term");
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var params = url.searchParams;
 
-		// Get parameter whether underscore or not
-		if (params.get("utmcontent")) {
-			localStorage.content = params.get("utmcontent");
-		} else if (params.get("utm_content")) {
-			localStorage.content = params.get("utm_content");
-		}
-	}
-	
+      if (params.get("utm_source")) {
+      	localStorage.source = params.get("utm_source");
+      	localStorage.medium = params.get("utm_medium");
+      	localStorage.campaign = params.get("utm_campaign");
+        localStorage.term = params.get("utm_term");
+
+      	// Get parameter whether underscore or not
+      	if (params.get("utmcontent")) {
+      		localStorage.content = params.get("utmcontent");
+      	} else if (params.get("utm_content")) {
+      		localStorage.content = params.get("utm_content");
+      	}
+      }
+
+      //add utm params to any shop links on the page for better tracking.
+      window.onload = function() {
+        var links = document.getElementsByTagName("a"); for (url in links) console.log(links[url].href);
+        var utmRegExp = /(\&|\?)utm_[A-Za-z]+=[A-Za-z0-9]+/gi;
+        var utmInheritingDomains = [
+          "mendelsensors.com/shop",
+          //"127.0.0.1:4000/shop",
+          "http://mendelsensors.com/shop",
+          //"http://127.0.0.1:4000/shop",
+          "https://mendelsensors.com/shop",
+          //"https://127.0.0.1:4000/shop",
+        ];
+        utms = [
+          "utm_medium=" + params.get("utm_medium"),
+          "utm_source=" + params.get("utm_source"),
+          "utm_campaign=" + params.get("utm_campaign"),
+          "utm_content=" + params.get("utm_content"),
+          "utm_term=" + params.get("utm_term"),
+        ];
+        for (var index2 = 0; index2 < links.length; index2 += 1) {
+          for (var index = 0; index < links.length; index += 1) {
+            var tempLink = links[index].href,
+            tempParts;
+            if (tempLink.indexOf(utmInheritingDomains[index2]) > 0) { // The script is looking for all links with the utmInheritingDomain
+              tempLink = tempLink.replace(utmRegExp, "");
+              tempParts = tempLink.split("#");
+              if (tempParts[0].indexOf("?") < 0 ) {
+                tempParts[0] += "?" + utms.join("&"); // The script adds UTM parameters to all links with the domain you've defined
+              } else {
+                tempParts[0] += "&" + utms.join("&");
+              }
+              tempLink = tempParts.join("#");
+            }
+            links[index].href = tempLink;
+          }
+        }
+      };
+
+
 	// Listen for messages from Shopify Order Status page; sends
 	// requested localStorage vars to domain of requesting page
 	window.onmessage = function(e) {
