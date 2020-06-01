@@ -79,42 +79,42 @@
       }
 
       //add utm params to any shop links on the page for better tracking.
-      window.onload = function() {
-        var links = document.getElementsByTagName("a"); for (url in links) console.log(links[url].href);
-        var utmRegExp = /(\&|\?)utm_[A-Za-z]+=[A-Za-z0-9]+/gi;
-        var utmInheritingDomains = [
-          "mendelsensors.com/shop",
-          //"127.0.0.1:4000/shop",
-          "http://mendelsensors.com/shop",
-          //"http://127.0.0.1:4000/shop",
-          "https://mendelsensors.com/shop",
-          //"https://127.0.0.1:4000/shop",
-        ];
-        utms = [
-          "utm_medium=" + params.get("utm_medium"),
-          "utm_source=" + params.get("utm_source"),
-          "utm_campaign=" + params.get("utm_campaign"),
-          "utm_content=" + params.get("utm_content"),
-          //"utm_term=" + params.get("utm_term"),
-        ];
-        for (var index2 = 0; index2 < links.length; index2 += 1) {
-          for (var index = 0; index < links.length; index += 1) {
-            var tempLink = links[index].href,
-            tempParts;
-            if (tempLink.indexOf(utmInheritingDomains[index2]) > 0) { // The script is looking for all links with the utmInheritingDomain
-              tempLink = tempLink.replace(utmRegExp, "");
-              tempParts = tempLink.split("#");
-              if (tempParts[0].indexOf("?") < 0 ) {
-                tempParts[0] += "?" + utms.join("&"); // The script adds UTM parameters to all links with the domain you've defined
-              } else {
-                tempParts[0] += "&" + utms.join("&");
-              }
-              tempLink = tempParts.join("#");
-            }
-            links[index].href = tempLink;
-          }
-        }
-      };
+      // window.onload = function() {
+      //   var links = document.getElementsByTagName("a"); for (url in links) console.log(links[url].href);
+      //   var utmRegExp = /(\&|\?)utm_[A-Za-z]+=[A-Za-z0-9]+/gi;
+      //   var utmInheritingDomains = [
+      //     "mendelsensors.com/shop",
+      //     //"127.0.0.1:4000/shop",
+      //     "http://mendelsensors.com/shop",
+      //     //"http://127.0.0.1:4000/shop",
+      //     "https://mendelsensors.com/shop",
+      //     //"https://127.0.0.1:4000/shop",
+      //   ];
+      //   utms = [
+      //     "utm_medium=" + params.get("utm_medium"),
+      //     "utm_source=" + params.get("utm_source"),
+      //     "utm_campaign=" + params.get("utm_campaign"),
+      //     "utm_content=" + params.get("utm_content"),
+      //     //"utm_term=" + params.get("utm_term"),
+      //   ];
+      //   for (var index2 = 0; index2 < links.length; index2 += 1) {
+      //     for (var index = 0; index < links.length; index += 1) {
+      //       var tempLink = links[index].href,
+      //       tempParts;
+      //       if (tempLink.indexOf(utmInheritingDomains[index2]) > 0) { // The script is looking for all links with the utmInheritingDomain
+      //         tempLink = tempLink.replace(utmRegExp, "");
+      //         tempParts = tempLink.split("#");
+      //         if (tempParts[0].indexOf("?") < 0 ) {
+      //           tempParts[0] += "?" + utms.join("&"); // The script adds UTM parameters to all links with the domain you've defined
+      //         } else {
+      //           tempParts[0] += "&" + utms.join("&");
+      //         }
+      //         tempLink = tempParts.join("#");
+      //       }
+      //       links[index].href = tempLink;
+      //     }
+      //   }
+      // };
 
 
 	// Listen for messages from Shopify Order Status page; sends
