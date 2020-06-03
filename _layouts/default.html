@@ -55,6 +55,11 @@
   		</script>
       <!-- Google Analytics End -->
 
+      <!-- Yotpo header js script-->
+      <script type="text/javascript">
+        (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/drlEfv8gEb2wweVH7S7f8wpPFuRSnjVh4UmgyPl1/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+      </script>
+
     {% endif %}
 
     <!-- Get UTM parameters from URL, save to localStorage -->
@@ -151,12 +156,19 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Topbar -->
-    <!-- <section class="topbar bg-dark d-flex" style="background-color: #961de2 !important;
-    font-weight: 600;">
+    <!-- override certain style rules for topbar -->
+    <!-- <style scoped>
+      .topbar {
+        background-color: #961de2 !important;
+        font-weight: 600;
+        height:48px;
+      }
+    </style>
+    <section class="topbar bg-dark d-flex">
       <div class="container">
         <! first div is left align, second is centered, third is right aligned...-->
         <!-- <div></div>
-        <div style="color:white;">Through April 20th use code 420 for 42% off your order!</div>
+        <div style="color:white;"><img style="width: 25px; height: 25px;" src="../assets/img/blackRibbon.png" alt="logo">We stand in support of racial equality. In the month of June, for each $50 donated towards this effort we will share a 50% off code on a sensor.</div>
         <div></div>
       </div>
     </section> -->
